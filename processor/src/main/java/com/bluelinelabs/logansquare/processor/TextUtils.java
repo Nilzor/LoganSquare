@@ -1,5 +1,7 @@
 package com.bluelinelabs.logansquare.processor;
 
+import java.util.Locale;
+
 public class TextUtils {
 
     public static boolean isEmpty(String string) {
@@ -29,6 +31,12 @@ public class TextUtils {
         }
 
         return sb.toString();
+    }
+
+    /** Converts first character to lower case */
+    public static String toLowerCaseFirstChar(String text) {
+        if (text.length() <= 1) return text.toLowerCase(Locale.ENGLISH);
+        return ("" + text.charAt(0)).toLowerCase(Locale.ENGLISH) + text.substring(1);
     }
 
 }

@@ -28,6 +28,9 @@ public class JsonFieldHolder {
                 case LOWER_CASE_WITH_UNDERSCORES:
                     defaultFieldName = TextUtils.toLowerCaseWithUnderscores(defaultFieldName);
                     break;
+                case FIRST_CHAR_LOWER_CASE:
+                    defaultFieldName = TextUtils.toLowerCaseFirstChar(defaultFieldName);
+                    break;
             }
 
             fieldNames = new String[] { defaultFieldName };
