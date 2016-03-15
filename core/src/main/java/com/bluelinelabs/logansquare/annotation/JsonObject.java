@@ -48,7 +48,12 @@ public @interface JsonObject {
          * underscores, unless the 'name' parameter is passed into the @JsonField
          * annotation
          */
-        LOWER_CASE_WITH_UNDERSCORES
+        LOWER_CASE_WITH_UNDERSCORES,
+
+        /**
+         * Use the Java variable's name but lowercases the first character
+         */
+        FIRST_CHAR_LOWER_CASE
     }
 
     /**
